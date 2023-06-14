@@ -1,9 +1,16 @@
 {
   "name": "react-echo",
+  "description": "Universal & Complete React text component",
   "version": "1.0.3",
   "types": "./dist/cjs/index.d.ts",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
+  "license": "MIT",
+  "author": {
+    "email": "jonathan@asplund.net",
+    "name": "Jonathan Asplund",
+    "url": "https://asplund.dev"
+  },
   "scripts": {
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "build:esm": "tsc --module es6 --outDir dist/esm",
@@ -19,6 +26,13 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "text",
+    "echo",
+    "react-echo",
+    "print"
   ],
   "dependencies": {
     "classnames": "^2.3.2",

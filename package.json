@@ -2,6 +2,11 @@
   "name": "react-echo",
   "version": "0.0.0",
   "license": "MIT",
+  "author": {
+    "email": "jonathan@asplund.net",
+    "name": "Jonathan Asplund",
+    "url": "https://asplund.dev"
+  },
   "scripts": {
     "release": "npx lerna publish --no-private",
     "build": "npx lerna run --parallel build"
