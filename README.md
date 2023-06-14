@@ -20,7 +20,7 @@ import { styles } from "./text.module.css";
 
 function App() {
   return (
-    <TextProvider scoped={styles}>
+    <TextProvider classNames={styles}>
       <Text>Hello World!</Text>
     </TextProvider>
   );
