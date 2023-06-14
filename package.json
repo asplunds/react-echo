@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "release": "npx lerna publish --no-private"
+    "release": "npx lerna publish --no-private",
+    "build": "npx lerna run --parallel build"
   },
   "private": true,
   "devDependencies": {
     "lerna": "^5.5.4",
     "nx": "16.3.2",
-    "nx-cloud": "latest"
+    "nx-cloud": "^16.0.5"
   },
   "workspaces": [
     "packages/*"
