@@ -1,4 +1,4 @@
-import React, { CSSProperties, useMemo } from "react";
+import React, { CSSProperties } from "react";
 import cx from "./cx";
 import { useText } from "./TextProvider";
 
@@ -14,6 +14,8 @@ type Base = {
   family?: string;
   font?: string;
   size?: string | number;
+  underline?: boolean;
+  strikethrough?: boolean;
   weight?:
     | CSSProperties["fontWeight"]
     | 100
@@ -83,6 +85,8 @@ function Text(props: object) {
     inline,
     weight,
     size,
+    underline,
+    strikethrough,
     ...rest
   } = props as {
     as?: TextTags;
@@ -96,7 +100,7 @@ function Text(props: object) {
     style?: CSSProperties;
     children?: React.ReactNode;
   } & Base;
-  const Component: TextTags = useMemo(() => {
+  const Component: TextTags = (() => {
     if (as != null) {
       return as;
     }
@@ -116,19 +120,21 @@ function Text(props: object) {
       default:
         return "p";
     }
-  }, [as, h1, h2, h3, h4, h5, h6]);
+  })();
 
-  const styles = useMemo(() => {
+  const styles = (() => {
     return {
       color,
       display: inline ? "inline" : undefined,
       fontWeight: bold ? "bold" : weight,
       fontStyle: italic ? "italic" : undefined,
       fontFamily: family ?? font,
+      textDecoration: underline ? "underline" : undefined,
+      textDecorationLine: strikethrough ? "line-through" : undefined,
       fontSize: size,
       ...style,
     };
-  }, [color, bold, inline, italic, family, font, style]);
+  })();
 
   if (family && font) {
     throw new Error(
@@ -155,6 +161,8 @@ function Text(props: object) {
         [ctx.classNames.h6]: h6,
         [ctx.classNames.tiny]: size === "tiny",
         [ctx.classNames.small]: size === "small",
+        [ctx.classNames.underline]: underline,
+        [ctx.classNames.strikethrough]: strikethrough,
         [ctx.classNames.inline]: inline,
         [ctx.classNames.bold]: bold,
       })}

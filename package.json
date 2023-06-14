@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
+    "lerna": "^5.5.4",
     "nx": "16.3.2",
     "nx-cloud": "latest"
   },

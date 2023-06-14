@@ -30,9 +30,9 @@ function App() {
 **text.module.css**
 
 ```css
-.text {
+.text, .text.h {
   margin: 0;
-  font-family: inherit;
+  font-family: arial;
 }
 .text.p {
 }
@@ -72,7 +72,7 @@ function App() {
 <Text h4>Heading 4</Text>
 <Text h5>Heading 5</Text>
 <Text h6>Heading 6</Text>
-<Text h6>Heading 6</Text>
+<Text h1 as="h3">Heading 3 with heading 1 styles (SEO)</Text>
 <Text>
   Place inline
   <Text inline>
