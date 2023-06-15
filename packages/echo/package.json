@@ -1,7 +1,7 @@
 {
   "name": "react-echo",
   "description": "Universal & Complete React text component",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "types": "./dist/cjs/index.d.ts",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
