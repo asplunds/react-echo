@@ -1,3 +1,5 @@
+"use client";
+
 import React, { CSSProperties } from "react";
 import cx from "./cx";
 import { useText } from "./TextProvider";
