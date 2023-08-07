@@ -153,7 +153,7 @@ function Text(props: object) {
   return (
     <Component
       style={styles}
-      className={cx(ctx.classNames.text, {
+      className={cx(className, ctx.classNames.text, {
         [ctx.classNames.h]: h1 || h2 || h3 || h4 || h5 || h6,
         [ctx.classNames.h1]: h1,
         [ctx.classNames.h2]: h2,
